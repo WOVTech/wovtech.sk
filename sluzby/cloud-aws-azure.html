@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="sk">
+<head>
+  <link rel="icon" href="/assets/img/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cloud ops (AWS/Azure/GCP) | WOV Tech</title>
+  <meta name="description" content="Cloud ops pre AWS/Azure/GCP: štandardy, bezpečnosť, prístupy, IaC a stabilizácia prevádzky. Menej ručných zásahov, viac kontroly a opakovateľnosti." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://wovtech.sk/sluzby/cloud-aws-azure.html" />
+
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Cloud ops (AWS/Azure/GCP) | WOV Tech" />
+  <meta property="og:description" content="Cloud ops pre AWS/Azure/GCP: štandardy, bezpečnosť, prístupy, IaC a stabilizácia prevádzky. Menej ručných zásahov, viac kontroly a opakovateľnosti." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://wovtech.sk/sluzby/cloud-aws-azure.html" />
+  <meta property="og:image" content="https://wovtech.sk/assets/img/logo-full.png" />
+  <meta property="og:image:width" content="800" />
+  <meta property="og:image:height" content="412" />
+
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Cloud ops (AWS/Azure/GCP) | WOV Tech" />
+  <meta name="twitter:description" content="Cloud ops pre AWS/Azure/GCP: štandardy, bezpečnosť, prístupy, IaC a stabilizácia prevádzky. Menej ručných zásahov, viac kontroly a opakovateľnosti." />
+  <meta name="twitter:image" content="https://wovtech.sk/assets/img/logo-full.png" />
+  <meta name="theme-color" content="#0b1220" />
+  <link rel="preload" href="/assets/img/hero-laptop.webp" as="image" type="image/webp" fetchpriority="high" />
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+</head>
+<body>
+  <script src="/assets/js/dropdown.js" defer></script>
+  <a class="skip-link" href="#content">Preskočiť na obsah</a>
+
+  <header class="header">
+    <div class="container">
+      <nav class="nav" aria-label="Hlavná navigácia">
+        <a class="brand" href="/">
+          <img class="brand-logo" src="/assets/img/logo-mark.png" alt="WOV Tech logo" width="36" height="36" />
+          <span>WOV Tech <span class="sub">Správne nastavené IT</span></span>
+        </a>
+        <div class="menu">
+          <a href="/" aria-label="Domov">Domov</a>
+          <div class="dropdown" data-dropdown>
+            <a href="/sluzby/" class="drop-trigger" data-dropdown-trigger>Služby ▾</a>
+            <div class="submenu" role="menu" data-dropdown-menu>
+              <span class="submenu-title">Jednotlivé služby</span>
+              <a href="/sluzby/">Všetky služby</a>
+              <a href="/sluzby/navrh-infrastruktury.html">Návrh IT infraštruktúry</a>
+              <a href="/sluzby/cloud-aws-azure.html">Cloud AWS / Azure</a>
+              <a href="/sluzby/monitoring-infrastruktury.html">Monitoring infraštruktúry</a>
+              <a href="/sluzby/log-manazment.html">Log manažment</a>
+              <a href="/sluzby/zalohy-a-obnova.html">Zálohovanie a obnova</a>
+              <a href="/sluzby/it-podpora.html">IT podpora</a>
+              <a href="/sluzby/ddi-dns-dhcp-ipam.html">DDI / DNS / DHCP / IPAM</a>
+              <a href="/sluzby/ntp.html">NTP</a>
+            </div>
+          </div>
+          <div class="dropdown" data-dropdown>
+            <a href="/clanky/" class="drop-trigger" data-dropdown-trigger>Články ▾</a>
+            <div class="submenu" role="menu" data-dropdown-menu>
+              <span class="submenu-title">Články</span>
+              <a href="/clanky/">Všetky články</a>
+              <a href="/clanky/monitoring-vs-logy.html">Monitoring vs. logy</a>
+              <a href="/clanky/zalohy-a-obnova.html">Zálohovanie a obnova</a>
+              <a href="/clanky/ntp-preco-je-cas-kriticky.html">NTP: prečo je správny čas kritický</a>
+              <a href="/clanky/incident-a-change-procesy.html">Incidenty a zmeny</a>
+              <a href="/clanky/pristupy-a-identita.html">Prístupy a identita</a>
+              <a href="/clanky/networking-v-infra-navrhu.html">Sieť v návrhu infraštruktúry</a>
+              <a href="/clanky/dokumentacia-a-runbooky.html">Dokumentácia a runbooky</a>
+            </div>
+          </div>
+          <div class="dropdown" data-dropdown>
+            <a href="/prirucky/" class="drop-trigger" data-dropdown-trigger>Príručky ▾</a>
+            <div class="submenu" role="menu" data-dropdown-menu>
+              <span class="submenu-title">Príručky a kontrolné zoznamy</span>
+              <a href="/prirucky/">Všetky príručky</a>
+              <a href="/prirucky/ddi-dns-dhcp-ipam.html">DDI / DNS / DHCP / IPAM — sieťové služby</a>
+              <a href="/prirucky/ntp.html">NTP — presný čas v sieti</a>
+              <a href="/prirucky/cloud-aws-azure.html">Cloud AWS / Azure / GCP — cloudová architektúra</a>
+              <a href="/prirucky/monitoring-infrastruktury.html">Monitoring — zdravie infraštruktúry</a>
+              <a href="/prirucky/log-manazment.html">Log manažment — zber a analýza logov</a>
+              <a href="/prirucky/zalohy-a-obnova.html">Zálohovanie a obnova — obnoviteľnosť</a>
+            </div>
+          </div>
+          <a href="/o-nas.html">O nás</a>
+          <a href="/kontakt.html">Kontakt</a>
+        </div>
+        <div class="language-area">
+          <a class="language-switch" href="https://wovtech.eu/" lang="en" hreflang="en" aria-label="Switch to English">
+            <span class="language-code">EN</span>
+            <span class="language-label">English</span>
+          </a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="content">
+
+    <section class="hero">
+      <div class="container">
+        <div class="card pad-lg">
+                    <nav class="breadcrumbs" aria-label="Drobečková navigácia">
+            <a href="/">Domov</a><span aria-hidden="true">›</span>
+            <a href="/sluzby/">Služby</a><span aria-hidden="true">›</span>
+            <span aria-current="page">Cloud ops: AWS / Azure / Google Cloud</span>
+          </nav>
+
+          <h1>Cloud ops: AWS / Azure / Google Cloud</h1>
+          <p>
+            Prevádzka cloud prostredí so zameraním na bezpečnosť, stabilitu a auditovateľnosť.
+            Cieľom je menej ručných zásahov a viac štandardov, ktoré sa dajú dlhodobo udržiavať.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container two-col">
+        <div class="card pad">
+          <h2>Čo typicky riešime</h2>
+          <ul class="list">
+            <li>základné štandardy: účty/subscriptions, naming, tagging, politika prístupov</li>
+            <li>bezpečnosť a ochrana perimetra: WAF, load balancing, segmentácia, hardening</li>
+            <li>zálohovanie a obnova, správa storage, šifrovanie a kľúče</li>
+            <li>IaC a režim zmien (napr. Terraform): opakovateľnosť, kontrola a minimalizácia driftu</li>
+            <li>troubleshooting a stabilizácia: výkon, dostupnosť, incidenty a prevádzkové riziká</li>
+          </ul>
+        </div>
+
+        <div class="card pad">
+          <h2>Prečo je to dôležité</h2>
+          <p>
+            Cloud infraštruktúra môže byť mimoriadne výkonná, ale aj mimoriadne riziková, ak nie je správne nastavená.
+            Bez dobrých štandardov veľmi rýchlo rastú náklady, bezpečnostné medzery a technický dlh.
+          </p>
+          <p>
+            <b>Príklady problémov:</b> zbytočne bežiace zdroje, netesnosti v bezpečnosti (napr. verejne dostupné S3 buckety),
+            nefunkčná disaster recovery alebo chýbajúca auditovateľnosť zmien.
+          </p>
+        </div>
+
+        <div class="card pad">
+          <h2>Čo to zahŕňa</h2>
+          <ul class="list">
+            <li><b>Governance:</b> práva, role, politiky, tagging a kontrola billingu</li>
+            <li><b>Security:</b> bezpečnosť siete, Identity &amp; Access manažment, šifrovanie, compliance</li>
+            <li><b>Infrastructure as Code:</b> Terraform, CloudFormation, repeatable deployments</li>
+            <li><b>Monitoring &amp; observability:</b> CloudWatch, metriky, logy, alerting</li>
+            <li><b>Optimalizácia:</b> náklady, výkon, utilizácia, autoscaling</li>
+          </ul>
+        </div>
+
+        <div class="card pad">
+          <h2>Typické scenáre</h2>
+          <ul class="list">
+            <li><b>Migrácia:</b> z on-prem do cloudu (lift &amp; shift, refactor)</li>
+            <li><b>Hybrid:</b> prepojenie on-prem a cloud prostredia</li>
+            <li><b>Multi-cloud:</b> AWS a Azure zároveň, prenositeľnosť a konzistencia</li>
+            <li><b>Optimalizácia:</b> existujúci cloud je príliš drahý alebo nedostatočne zabezpečený</li>
+          </ul>
+        </div>
+
+        <div class="card pad">
+          <h2>Často kladené otázky</h2>
+          <p><b>Ako dlho trvá migrácia do cloudu?</b></p>
+          <p>Závisí od veľkosti a zložitosti. Malá aplikácia: týždne. Väčší systém s dátami: mesiace. Plán zmien a testovanie sú kľúčové.</p>
+          <p><b>Je cloud lacnejší ako on-prem?</b></p>
+          <p>Často áno na začiatku, ale bez dobrého monitoringu a governance môžu náklady rásť. Kľúčom je optimalizácia a disciplína v prevádzke.</p>
+          <p><b>Ako zaistiť bezpečnosť?</b></p>
+          <p>Least privilege access, šifrovanie, monitoring a pravidelné compliance kontroly. Audit by mal byť bežnou súčasťou prevádzky.</p>
+        </div>
+
+        <div class="card pad">
+          <h2>Ako pracujeme</h2>
+          <p>
+            <b>Audit:</b> skontrolujeme vaše cloud prostredie, identifikujeme riziká a príležitosti na optimalizáciu.
+          </p>
+          <p>
+            <b>Návrh:</b> architektúra, security guardrails, cost optimization, disaster recovery.
+          </p>
+          <p>
+            <b>Implementácia:</b> pomoc s IaC, automatizáciou, monitoringom a runbookmi.
+          </p>
+        </div>
+
+        <div class="card pad">
+          <h2>Kontakt</h2>
+          <p>
+            Ak plánujete migráciu do cloudu, optimalizujete existujúce prostredie alebo potrebujete bezpečný hybrid setup,
+            <a href="/kontakt.html"><b>ozvite sa nám</b></a>.
+          </p>
+        </div>
+
+        <div class="card pad related-links">
+          <h2>Súvisiace články</h2>
+          <ul class="list">
+            <li><a href="/prirucky/cloud-aws-azure.html">Cloud: čo si premyslieť</a></li>
+            <li><a href="/clanky/pristupy-a-identita.html">Prístupy &amp; identita</a></li>
+            <li><a href="/prirucky/zalohy-a-obnova.html">Zálohy a obnova</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="brand">
+          <img class="brand-logo" src="/assets/img/logo-mark.png" alt="WOV Tech logo" width="36" height="36" />
+          <span>
+            WOV Tech
+            <span class="sub">Správne nastavené IT</span>
+          </span>
+        </div>
+        <small>© 2026 WOV Tech s. r. o.</small>
+        <div style="margin-top:8px; display:flex; gap:10px; flex-wrap:wrap">
+          <a href="/ochrana-osobnych-udajov.html">Ochrana osobných údajov</a>
+          <a href="/obchodne-podmienky.html">Obchodné podmienky</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Organization","name":"WOV Tech s. r. o.","url":"https://wovtech.sk","email":"kontakt@wovtech.sk","areaServed":["SK"],"description":"Návrh a stabilizácia IT infraštruktúry: DDI (DNS/DHCP/IPAM), NTP, cloud (AWS/Azure/GCP), monitoring infra, log manažment a zálohovanie."}
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://wovtech.sk/sluzby/cloud-aws-azure.html#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Domov",
+            "item": "https://wovtech.sk/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Služby",
+            "item": "https://wovtech.sk/sluzby/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Cloud ops: AWS / Azure / Google Cloud",
+            "item": "https://wovtech.sk/sluzby/cloud-aws-azure.html"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</body>
+</html>

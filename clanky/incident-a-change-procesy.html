@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="sk">
+<head>
+  <link rel="icon" href="/assets/img/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Incident &amp; Change procesy | WOV Tech</title>
+  <meta name="description" content="Incident a change procesy ako súčasť operability: on-call, eskalácie, riadené zmeny, rollback a post-incident review." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://wovtech.sk/clanky/incident-a-change-procesy.html" />
+
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Incident &amp; Change procesy | WOV Tech" />
+  <meta property="og:description" content="Incident a change procesy ako súčasť operability: on-call, eskalácie, riadené zmeny, rollback a post-incident review." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://wovtech.sk/clanky/incident-a-change-procesy.html" />
+  <meta property="og:image" content="https://wovtech.sk/assets/img/logo-full.png" />
+  <meta property="og:image:width" content="800" />
+  <meta property="og:image:height" content="412" />
+
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Incident &amp; Change procesy | WOV Tech" />
+  <meta name="twitter:description" content="Incident a change procesy ako súčasť operability: on-call, eskalácie, riadené zmeny, rollback a post-incident review." />
+  <meta name="twitter:image" content="https://wovtech.sk/assets/img/logo-full.png" />
+  <meta name="theme-color" content="#0b1220" />
+  <link rel="preload" href="/assets/img/hero-laptop.webp" as="image" type="image/webp" fetchpriority="high" />
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+</head>
+<body>
+  <script src="/assets/js/dropdown.js" defer></script>
+  <a class="skip-link" href="#content">Preskočiť na obsah</a>
+
+  <header class="header">
+    <div class="container">
+      <nav class="nav" aria-label="Hlavná navigácia">
+        <a class="brand" href="/">
+          <img class="brand-logo" src="/assets/img/logo-mark.png" alt="WOV Tech logo" width="36" height="36" />
+          <span>WOV Tech <span class="sub">Správne nastavené IT</span></span>
+        </a>
+        <div class="menu">
+          <a href="/" aria-label="Domov">Domov</a>
+          <div class="dropdown" data-dropdown>
+            <a href="/sluzby/" class="drop-trigger" data-dropdown-trigger>Služby ▾</a>
+            <div class="submenu" role="menu" data-dropdown-menu>
+              <span class="submenu-title">Jednotlivé služby</span>
+              <a href="/sluzby/">Všetky služby</a>
+              <a href="/sluzby/navrh-infrastruktury.html">Návrh IT infraštruktúry</a>
+              <a href="/sluzby/cloud-aws-azure.html">Cloud AWS / Azure</a>
+              <a href="/sluzby/monitoring-infrastruktury.html">Monitoring infraštruktúry</a>
+              <a href="/sluzby/log-manazment.html">Log manažment</a>
+              <a href="/sluzby/zalohy-a-obnova.html">Zálohovanie a obnova</a>
+              <a href="/sluzby/it-podpora.html">IT podpora</a>
+              <a href="/sluzby/ddi-dns-dhcp-ipam.html">DDI / DNS / DHCP / IPAM</a>
+              <a href="/sluzby/ntp.html">NTP</a>
+            </div>
+          </div>
+          <div class="dropdown" data-dropdown>
+            <a href="/clanky/" class="drop-trigger" data-dropdown-trigger>Články ▾</a>
+            <div class="submenu" role="menu" data-dropdown-menu>
+              <span class="submenu-title">Články</span>
+              <a href="/clanky/">Všetky články</a>
+              <a href="/clanky/monitoring-vs-logy.html">Monitoring vs. logy</a>
+              <a href="/clanky/zalohy-a-obnova.html">Zálohovanie a obnova</a>
+              <a href="/clanky/ntp-preco-je-cas-kriticky.html">NTP: prečo je správny čas kritický</a>
+              <a href="/clanky/incident-a-change-procesy.html">Incidenty a zmeny</a>
+              <a href="/clanky/pristupy-a-identita.html">Prístupy a identita</a>
+              <a href="/clanky/networking-v-infra-navrhu.html">Sieť v návrhu infraštruktúry</a>
+              <a href="/clanky/dokumentacia-a-runbooky.html">Dokumentácia a runbooky</a>
+            </div>
+          </div>
+          <div class="dropdown" data-dropdown>
+            <a href="/prirucky/" class="drop-trigger" data-dropdown-trigger>Príručky ▾</a>
+            <div class="submenu" role="menu" data-dropdown-menu>
+              <span class="submenu-title">Príručky a kontrolné zoznamy</span>
+              <a href="/prirucky/">Všetky príručky</a>
+              <a href="/prirucky/ddi-dns-dhcp-ipam.html">DDI / DNS / DHCP / IPAM — sieťové služby</a>
+              <a href="/prirucky/ntp.html">NTP — presný čas v sieti</a>
+              <a href="/prirucky/cloud-aws-azure.html">Cloud AWS / Azure / GCP — cloudová architektúra</a>
+              <a href="/prirucky/monitoring-infrastruktury.html">Monitoring — zdravie infraštruktúry</a>
+              <a href="/prirucky/log-manazment.html">Log manažment — zber a analýza logov</a>
+              <a href="/prirucky/zalohy-a-obnova.html">Zálohovanie a obnova — obnoviteľnosť</a>
+            </div>
+          </div>
+          <a href="/o-nas.html">O nás</a>
+          <a href="/kontakt.html">Kontakt</a>
+        </div>
+        <div class="language-area">
+          <a class="language-switch" href="https://wovtech.eu/" lang="en" hreflang="en" aria-label="Switch to English">
+            <span class="language-code">EN</span>
+            <span class="language-label">English</span>
+          </a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="content">
+
+    <section class="hero">
+      <div class="container">
+        <div class="card pad-lg">
+                    <nav class="breadcrumbs" aria-label="Drobečková navigácia">
+            <a href="/">Domov</a><span aria-hidden="true">›</span>
+            <a href="/clanky/">Články</a><span aria-hidden="true">›</span>
+            <span aria-current="page">Incident &amp; Change procesy: základ prevádzkovateľnej infra</span>
+          </nav>
+
+          <h1>Incident &amp; Change procesy: základ prevádzkovateľnej infra</h1>
+          <p class="article-meta">Autor: WOV Tech · Publikované 15. 2. 2026 · Aktualizované 7. 8. 2026</p>
+          <p>
+            Stabilita infra nie je len o technológii. Rozhodujú aj procesy: kto reaguje na incident,
+            ako sa robia zmeny, ako vyzerá rollback a či sa poučenia z incidentov premietnu do praxe.
+          </p>
+
+          <div class="notice" style="margin-top:16px">
+            Incident proces skracuje výpadky vďaka jasnej zodpovednosti, eskaláciám a runbookom.
+            Change proces znižuje riziko tým, že zmeny sú plánované, testované a majú rollback.
+            Bez týchto minimum štandardov rastie počet incidentov aj náklady na prevádzku.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="card pad">
+          <h2>Otázky, ktoré si treba zodpovedať</h2>
+          <ul class="list">
+            <li>Kto je on-call a aká je eskalačná matica (čo, kedy a komu sa eskaluje)?</li>
+            <li>Ako prebiehajú zmeny v produkcii (schválenie, okno, evidencia a komunikácia)?</li>
+            <li>Existujú runbooky pre top incident scenáre (min. triage → akcia → eskalácia)?</li>
+            <li>Je rollback plán súčasťou každej rizikovej zmeny a kto ho môže spustiť?</li>
+            <li>Robíte post-incident review a vznikajú z neho konkrétne opatrenia (owner + termín)?</li>
+          </ul>
+
+          <div class="hr"></div>
+
+          <p>
+            Dobre nastavená infra robí incidenty „predvídateľnými“: signál z monitoringu/logov,
+            známy postup a jasné rozhodnutia. To skracuje MTTR a znižuje dopad na biznis.
+          </p>
+          <p>
+            Change proces nemusí byť byrokracia. Minimum, ktoré funguje: kto schvaľuje, kedy sa nasadzuje,
+            čo sa testuje a aký je návratový plán. Čím kritickejšia služba, tým prísnejší režim.
+          </p>
+          <p>
+            Ak chceš stabilitu, investuj do runbookov a zmenového režimu rovnako ako do technológie
+            — je to najlacnejší spôsob, ako znížiť incidenty.
+          </p>
+
+          <div class="hr"></div>
+          <p><b>Súvisiace:</b></p>
+          <ul class="list">
+            <li><a href="/clanky/dokumentacia-a-runbooky.html">Dokumentácia &amp; runbooky</a></li>
+            <li><a href="/clanky/monitoring-vs-logy.html">Monitoring vs logy</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="card pad">
+          <h2>Potrebujete pomoc?</h2>
+          <p>
+            Ak chcete stabilizovať incident a change manažment vo svojej infraštruktúre,
+            <b>ozvite sa nám</b> – pomôžeme vám nastaviť procesy, ktoré budú fungovať.
+          </p>
+          <a class="cta" href="/kontakt.html">Kontaktovať WOV Tech</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="brand">
+          <img class="brand-logo" src="/assets/img/logo-mark.png" alt="WOV Tech logo" width="36" height="36" />
+          <span>
+            WOV Tech
+            <span class="sub">Správne nastavené IT</span>
+          </span>
+        </div>
+        <small>© 2026 WOV Tech s. r. o.</small>
+        <div style="margin-top:8px; display:flex; gap:10px; flex-wrap:wrap">
+          <a href="/ochrana-osobnych-udajov.html">Ochrana osobných údajov</a>
+          <a href="/obchodne-podmienky.html">Obchodné podmienky</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Organization","name":"WOV Tech s. r. o.","url":"https://wovtech.sk","email":"kontakt@wovtech.sk","areaServed":["SK"],"description":"Návrh a stabilizácia IT infraštruktúry: DDI (DNS/DHCP/IPAM), NTP, cloud (AWS/Azure/GCP), monitoring infra, log manažment a zálohovanie."}
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://wovtech.sk/clanky/incident-a-change-procesy.html#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Domov",
+            "item": "https://wovtech.sk/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Články",
+            "item": "https://wovtech.sk/clanky/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Incident & Change procesy: základ prevádzkovateľnej infra",
+            "item": "https://wovtech.sk/clanky/incident-a-change-procesy.html"
+          }
+        ]
+      },
+      {
+        "@type": "Article",
+        "@id": "https://wovtech.sk/clanky/incident-a-change-procesy.html#article",
+        "headline": "Incident & Change procesy: základ prevádzkovateľnej infra",
+        "description": "Incident a change procesy ako súčasť operability: on-call, eskalácie, riadené zmeny, rollback a post-incident review.",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://wovtech.sk/clanky/incident-a-change-procesy.html"
+        },
+        "datePublished": "2026-02-15",
+        "dateModified": "2026-08-07",
+        "author": {
+          "@type": "Organization",
+          "name": "WOV Tech",
+          "url": "https://wovtech.sk/"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "WOV Tech",
+          "url": "https://wovtech.sk/",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://wovtech.sk/assets/img/logo-full.png"
+          }
+        },
+        "image": "https://wovtech.sk/assets/img/logo-full.png"
+      }
+    ]
+  }
+  </script>
+</body>
+</html>

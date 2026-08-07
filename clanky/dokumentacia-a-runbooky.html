@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="sk">
+<head>
+  <link rel="icon" href="/assets/img/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Dokumentácia &amp; runbooky | WOV Tech</title>
+  <meta name="description" content="Dokumentácia a runbooky pre infra: zdroj pravdy, postupy pri incidente a zmene, onboarding a minimum štandard pre prevádzkovateľnosť." />
+
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://wovtech.sk/clanky/dokumentacia-a-runbooky.html" />
+
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Dokumentácia &amp; runbooky | WOV Tech" />
+  <meta property="og:description" content="Dokumentácia a runbooky pre infra: zdroj pravdy, postupy pri incidente a zmene, onboarding a minimum štandard pre prevádzkovateľnosť." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://wovtech.sk/clanky/dokumentacia-a-runbooky.html" />
+  <meta property="og:image" content="https://wovtech.sk/assets/img/logo-full.png" />
+  <meta property="og:image:width" content="800" />
+  <meta property="og:image:height" content="412" />
+
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Dokumentácia &amp; runbooky | WOV Tech" />
+  <meta name="twitter:description" content="Dokumentácia a runbooky pre infra: zdroj pravdy, postupy pri incidente a zmene, onboarding a minimum štandard pre prevádzkovateľnosť." />
+  <meta name="twitter:image" content="https://wovtech.sk/assets/img/logo-full.png" />
+
+  <meta name="theme-color" content="#0b1220" />
+  <link rel="preload" href="/assets/img/hero-laptop.webp" as="image" type="image/webp" fetchpriority="high" />
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+</head>
+
+<body>
+  <script src="/assets/js/dropdown.js" defer></script>
+  <a class="skip-link" href="#content">Preskočiť na obsah</a>
+
+  <header class="header">
+    <div class="container">
+      <nav class="nav" aria-label="Hlavná navigácia">
+        <a class="brand" href="/">
+          <img class="brand-logo" src="/assets/img/logo-mark.png" alt="WOV Tech logo" width="36" height="36" />
+          <span>WOV Tech <span class="sub">Správne nastavené IT</span></span>
+        </a>
+        <div class="menu">
+          <a href="/" aria-label="Domov">Domov</a>
+          <div class="dropdown" data-dropdown>
+            <a href="/sluzby/" class="drop-trigger" data-dropdown-trigger>Služby ▾</a>
+            <div class="submenu" role="menu" data-dropdown-menu>
+              <span class="submenu-title">Jednotlivé služby</span>
+              <a href="/sluzby/">Všetky služby</a>
+              <a href="/sluzby/navrh-infrastruktury.html">Návrh IT infraštruktúry</a>
+              <a href="/sluzby/cloud-aws-azure.html">Cloud AWS / Azure</a>
+              <a href="/sluzby/monitoring-infrastruktury.html">Monitoring infraštruktúry</a>
+              <a href="/sluzby/log-manazment.html">Log manažment</a>
+              <a href="/sluzby/zalohy-a-obnova.html">Zálohovanie a obnova</a>
+              <a href="/sluzby/it-podpora.html">IT podpora</a>
+              <a href="/sluzby/ddi-dns-dhcp-ipam.html">DDI / DNS / DHCP / IPAM</a>
+              <a href="/sluzby/ntp.html">NTP</a>
+            </div>
+          </div>
+          <div class="dropdown" data-dropdown>
+            <a href="/clanky/" class="drop-trigger" data-dropdown-trigger>Články ▾</a>
+            <div class="submenu" role="menu" data-dropdown-menu>
+              <span class="submenu-title">Články</span>
+              <a href="/clanky/">Všetky články</a>
+              <a href="/clanky/monitoring-vs-logy.html">Monitoring vs. logy</a>
+              <a href="/clanky/zalohy-a-obnova.html">Zálohovanie a obnova</a>
+              <a href="/clanky/ntp-preco-je-cas-kriticky.html">NTP: prečo je správny čas kritický</a>
+              <a href="/clanky/incident-a-change-procesy.html">Incidenty a zmeny</a>
+              <a href="/clanky/pristupy-a-identita.html">Prístupy a identita</a>
+              <a href="/clanky/networking-v-infra-navrhu.html">Sieť v návrhu infraštruktúry</a>
+              <a href="/clanky/dokumentacia-a-runbooky.html">Dokumentácia a runbooky</a>
+            </div>
+          </div>
+          <div class="dropdown" data-dropdown>
+            <a href="/prirucky/" class="drop-trigger" data-dropdown-trigger>Príručky ▾</a>
+            <div class="submenu" role="menu" data-dropdown-menu>
+              <span class="submenu-title">Príručky a kontrolné zoznamy</span>
+              <a href="/prirucky/">Všetky príručky</a>
+              <a href="/prirucky/ddi-dns-dhcp-ipam.html">DDI / DNS / DHCP / IPAM — sieťové služby</a>
+              <a href="/prirucky/ntp.html">NTP — presný čas v sieti</a>
+              <a href="/prirucky/cloud-aws-azure.html">Cloud AWS / Azure / GCP — cloudová architektúra</a>
+              <a href="/prirucky/monitoring-infrastruktury.html">Monitoring — zdravie infraštruktúry</a>
+              <a href="/prirucky/log-manazment.html">Log manažment — zber a analýza logov</a>
+              <a href="/prirucky/zalohy-a-obnova.html">Zálohovanie a obnova — obnoviteľnosť</a>
+            </div>
+          </div>
+          <a href="/o-nas.html">O nás</a>
+          <a href="/kontakt.html">Kontakt</a>
+        </div>
+        <div class="language-area">
+          <a class="language-switch" href="https://wovtech.eu/" lang="en" hreflang="en" aria-label="Switch to English">
+            <span class="language-code">EN</span>
+            <span class="language-label">English</span>
+          </a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="content">
+
+    <section class="hero">
+      <div class="container">
+        <div class="card pad-lg">
+                    <nav class="breadcrumbs" aria-label="Drobečková navigácia">
+            <a href="/">Domov</a><span aria-hidden="true">›</span>
+            <a href="/clanky/">Články</a><span aria-hidden="true">›</span>
+            <span aria-current="page">Dokumentácia &amp; runbooky: minimum pre prevádzkovateľnú infra</span>
+          </nav>
+
+          <h1>Dokumentácia &amp; runbooky: minimum pre prevádzkovateľnú infra</h1>
+          <p class="article-meta">Autor: WOV Tech · Publikované 15. 2. 2026 · Aktualizované 7. 8. 2026</p>
+          <p>
+            Dokumentácia a runbooky nie sú „papierovanie“. Sú to artefakty, ktoré umožňujú stabilnú prevádzku,
+            auditovateľné zmeny a znižujú závislosť od jednotlivcov. Ak je knowledge iba „v hlave“,
+            riziko incidentu aj čas obnovy rastú.
+          </p>
+
+          <div class="notice" style="margin-top:16px">
+            Dokumentácia a runbooky znižujú riziko „bus factor“ a skracujú incidenty.
+            Cieľ nie je byrokracia – cieľ je rýchla orientácia, jasné rozhodnutia a opakovateľné postupy
+            (triage → akcia → rollback → eskalácia).
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="card pad">
+          <h2>Otázky, ktoré si treba zodpovedať</h2>
+          <ul class="list">
+            <li>Kde je „zdroj pravdy“ (repo/wiki/CMDB) a kto je zaň zodpovedný?</li>
+            <li>Máme runbooky pre incidenty, zmeny a obnovu (RTO/RPO scenáre)?</li>
+            <li>Je onboarding nového človeka možný bez dlhého shadowingu (a bez rizika)?</li>
+            <li>Sú konfigurácie a postupy verziované (history, review, rollback)?</li>
+            <li>Je dokumentácia udržiavaná a používaná, alebo formálne existuje a nikto jej neverí?</li>
+          </ul>
+
+          <div class="hr"></div>
+
+          <h2>Typické dopady, keď dokumentácia chýba</h2>
+          <ul class="list">
+            <li><b>Incident trvá dlhšie:</b> triage je pomalý, chýbajú overené kroky a eskalácia.</li>
+            <li><b>Rizikové zmeny:</b> zmeny sa robia „od oka“, bez dohľadateľnosti a bez rollbacku.</li>
+            <li><b>Single point of knowledge:</b> infra je závislá na 1–2 ľuďoch (dovolenka = riziko).</li>
+            <li><b>Neauditovateľnosť:</b> ťažko sa preukazuje „kto a prečo“ (compliance, bezpečnosť).</li>
+          </ul>
+
+          <p class="notice">
+            <b>Minimum štandard:</b> 1) krátky HLD/LLD kontext (čo a prečo), 2) runbooky pre top incident scenáre,
+            3) change postup + rollback, 4) ownership a review, 5) verzovanie v repozitári (alebo aspoň história).
+          </p>
+
+          <div class="hr"></div>
+
+          <p>
+            Runbook má byť krátky a použiteľný: <b>symptóm → kontrola → akcia → rollback → eskalácia</b>.
+            Cieľom nie je napísať román, ale umožniť konzistentnú reakciu aj mimo „core“ tímu.
+          </p>
+
+          <div class="hr"></div>
+
+          <p><b>Súvisiace:</b></p>
+          <ul class="list">
+            <li><a href="/clanky/incident-a-change-procesy.html">Incident &amp; Change procesy</a></li>
+            <li><a href="/clanky/zalohy-a-obnova.html">Zálohy a obnova</a></li>
+            <li><a href="/clanky/pristupy-a-identita.html">Prístupy &amp; identita</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="card pad">
+          <h2>Potrebujete pomoc?</h2>
+          <p>
+            Ak chcete vytvoriť alebo zlepšiť dokumentáciu a runbooky vo vašej infraštruktúre,
+            <b>ozvite sa nám</b> – pomôžeme vám s tým.
+          </p>
+          <a class="cta" href="/kontakt.html">Kontaktovať WOV Tech</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="brand">
+          <img class="brand-logo" src="/assets/img/logo-mark.png" alt="WOV Tech logo" width="36" height="36" />
+          <span>
+            WOV Tech
+            <span class="sub">Správne nastavené IT</span>
+          </span>
+        </div>
+        <small>© 2026 WOV Tech s. r. o.</small>
+        <div style="margin-top:8px; display:flex; gap:10px; flex-wrap:wrap">
+          <a href="/ochrana-osobnych-udajov.html">Ochrana osobných údajov</a>
+          <a href="/obchodne-podmienky.html">Obchodné podmienky</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Organization","name":"WOV Tech s. r. o.","url":"https://wovtech.sk","email":"kontakt@wovtech.sk","areaServed":["SK"],"description":"Návrh a stabilizácia IT infraštruktúry: DDI (DNS/DHCP/IPAM), NTP, cloud (AWS/Azure/GCP), monitoring infra, log manažment a zálohovanie."}
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://wovtech.sk/clanky/dokumentacia-a-runbooky.html#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Domov",
+            "item": "https://wovtech.sk/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Články",
+            "item": "https://wovtech.sk/clanky/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Dokumentácia & runbooky: minimum pre prevádzkovateľnú infra",
+            "item": "https://wovtech.sk/clanky/dokumentacia-a-runbooky.html"
+          }
+        ]
+      },
+      {
+        "@type": "Article",
+        "@id": "https://wovtech.sk/clanky/dokumentacia-a-runbooky.html#article",
+        "headline": "Dokumentácia & runbooky: minimum pre prevádzkovateľnú infra",
+        "description": "Dokumentácia a runbooky pre infra: zdroj pravdy, postupy pri incidente a zmene, onboarding a minimum štandard pre prevádzkovateľnosť.",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://wovtech.sk/clanky/dokumentacia-a-runbooky.html"
+        },
+        "datePublished": "2026-02-15",
+        "dateModified": "2026-08-07",
+        "author": {
+          "@type": "Organization",
+          "name": "WOV Tech",
+          "url": "https://wovtech.sk/"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "WOV Tech",
+          "url": "https://wovtech.sk/",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://wovtech.sk/assets/img/logo-full.png"
+          }
+        },
+        "image": "https://wovtech.sk/assets/img/logo-full.png"
+      }
+    ]
+  }
+  </script>
+</body>
+</html>

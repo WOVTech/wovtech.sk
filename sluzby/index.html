@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="sk">
+<head>
+  <link rel="icon" href="/assets/img/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>IT služby a podpora pre firmy | WOV Tech</title>
+
+  <meta name="description" content="IT služby pre firmy: návrh infraštruktúry, on-premises, AWS, Azure, GCP, DDI, NTP, monitoring, logy, zálohy, obnova a IT podpora." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://wovtech.sk/sluzby/" />
+
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="IT služby a podpora pre firmy | WOV Tech" />
+  <meta property="og:description" content="Návrh a stabilizácia infraštruktúry, on-premises, cloud, monitoring, logy, zálohy a IT podpora pre firmy." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://wovtech.sk/sluzby/" />
+  <meta property="og:image" content="https://wovtech.sk/assets/img/logo-full.png" />
+  <meta property="og:image:width" content="800" />
+  <meta property="og:image:height" content="412" />
+
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="IT služby a podpora pre firmy | WOV Tech" />
+  <meta name="twitter:description" content="Návrh infraštruktúry, on-premises, cloud, monitoring, logy, zálohy a IT podpora." />
+  <meta name="twitter:image" content="https://wovtech.sk/assets/img/logo-full.png" />
+
+  <meta name="theme-color" content="#0b1220" />
+  <link rel="preload" href="/assets/img/hero-laptop.webp" as="image" type="image/webp" fetchpriority="high" />
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+</head>
+<body>
+  <script src="/assets/js/dropdown.js" defer></script>
+  <a class="skip-link" href="#content">Preskočiť na obsah</a>
+
+  <header class="header">
+    <div class="container">
+      <nav class="nav" aria-label="Hlavná navigácia">
+        <a class="brand" href="/">
+          <img class="brand-logo" src="/assets/img/logo-mark.png" alt="WOV Tech logo" width="36" height="36" />
+          <span>WOV Tech <span class="sub">Správne nastavené IT</span></span>
+        </a>
+        <div class="menu">
+          <a href="/" aria-label="Domov">Domov</a>
+          <div class="dropdown" data-dropdown>
+            <a href="/sluzby/" class="drop-trigger" data-dropdown-trigger>Služby ▾</a>
+            <div class="submenu" role="menu" data-dropdown-menu>
+              <span class="submenu-title">Jednotlivé služby</span>
+              <a href="/sluzby/">Všetky služby</a>
+              <a href="/sluzby/navrh-infrastruktury.html">Návrh IT infraštruktúry</a>
+              <a href="/sluzby/cloud-aws-azure.html">Cloud AWS / Azure</a>
+              <a href="/sluzby/monitoring-infrastruktury.html">Monitoring infraštruktúry</a>
+              <a href="/sluzby/log-manazment.html">Log manažment</a>
+              <a href="/sluzby/zalohy-a-obnova.html">Zálohovanie a obnova</a>
+              <a href="/sluzby/it-podpora.html">IT podpora</a>
+              <a href="/sluzby/ddi-dns-dhcp-ipam.html">DDI / DNS / DHCP / IPAM</a>
+              <a href="/sluzby/ntp.html">NTP</a>
+            </div>
+          </div>
+          <div class="dropdown" data-dropdown>
+            <a href="/clanky/" class="drop-trigger" data-dropdown-trigger>Články ▾</a>
+            <div class="submenu" role="menu" data-dropdown-menu>
+              <span class="submenu-title">Články</span>
+              <a href="/clanky/">Všetky články</a>
+              <a href="/clanky/monitoring-vs-logy.html">Monitoring vs. logy</a>
+              <a href="/clanky/zalohy-a-obnova.html">Zálohovanie a obnova</a>
+              <a href="/clanky/ntp-preco-je-cas-kriticky.html">NTP: prečo je správny čas kritický</a>
+              <a href="/clanky/incident-a-change-procesy.html">Incidenty a zmeny</a>
+              <a href="/clanky/pristupy-a-identita.html">Prístupy a identita</a>
+              <a href="/clanky/networking-v-infra-navrhu.html">Sieť v návrhu infraštruktúry</a>
+              <a href="/clanky/dokumentacia-a-runbooky.html">Dokumentácia a runbooky</a>
+            </div>
+          </div>
+          <div class="dropdown" data-dropdown>
+            <a href="/prirucky/" class="drop-trigger" data-dropdown-trigger>Príručky ▾</a>
+            <div class="submenu" role="menu" data-dropdown-menu>
+              <span class="submenu-title">Príručky a kontrolné zoznamy</span>
+              <a href="/prirucky/">Všetky príručky</a>
+              <a href="/prirucky/ddi-dns-dhcp-ipam.html">DDI / DNS / DHCP / IPAM — sieťové služby</a>
+              <a href="/prirucky/ntp.html">NTP — presný čas v sieti</a>
+              <a href="/prirucky/cloud-aws-azure.html">Cloud AWS / Azure / GCP — cloudová architektúra</a>
+              <a href="/prirucky/monitoring-infrastruktury.html">Monitoring — zdravie infraštruktúry</a>
+              <a href="/prirucky/log-manazment.html">Log manažment — zber a analýza logov</a>
+              <a href="/prirucky/zalohy-a-obnova.html">Zálohovanie a obnova — obnoviteľnosť</a>
+            </div>
+          </div>
+          <a href="/o-nas.html">O nás</a>
+          <a href="/kontakt.html">Kontakt</a>
+        </div>
+        <div class="language-area">
+          <a class="language-switch" href="https://wovtech.eu/" lang="en" hreflang="en" aria-label="Switch to English">
+            <span class="language-code">EN</span>
+            <span class="language-label">English</span>
+          </a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="content">
+    <section class="hero">
+      <div class="grain" aria-hidden="true"></div>
+
+      <div class="container">
+        <div class="card pad-lg">
+          <h1>Služby pre firmy, ktoré chcú mať IT stabilnejšie, prehľadnejšie a lepšie pripravené na zmeny</h1>
+
+          <p>
+            Pomáhame <b>malým, stredným a veľkým firmám</b> s oblasťami, ktoré sú dôležité pre spoľahlivé fungovanie IT.
+            Nejde len o technológie samotné, ale aj o to, aby boli správne navrhnuté, zrozumiteľne spravované
+            a reálne použiteľné v každodennej prevádzke.
+          </p>
+
+          <p>
+            Naše služby najčastejšie využívajú firmy, ktoré:
+          </p>
+
+          <ul class="list" aria-label="Pre koho sú služby vhodné" style="margin-top:10px">
+            <li>majú neprehľadné alebo nestabilné IT prostredie,</li>
+            <li>pripravujú zmenu, migráciu alebo modernizáciu,</li>
+            <li>potrebujú lepšie pokryť monitoring, logy, zálohy alebo cloud,</li>
+            <li>chcú mať v IT viac poriadku a nižšie prevádzkové riziká.</li>
+          </ul>
+
+          <div class="hr"></div>
+
+          <p style="margin-top:12px">
+            Zjednodušene: <b>pomáhame firmám nastaviť dôležité oblasti infraštruktúry tak, aby IT podporovalo fungovanie firmy, a nie ju brzdilo.</b>
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>Hlavné oblasti, s ktorými pomáhame</h2>
+        <p>Nižšie nájdete služby, ktoré najčastejšie riešime pri návrhu, úprave a stabilizácii IT infraštruktúry.</p>
+
+        <div class="grid" role="list">
+          <div class="service" role="listitem">
+            <h3>Návrh IT infraštruktúry</h3>
+            <p>Pomáhame navrhnúť IT prostredie tak, aby bolo prehľadné, bezpečné, stabilné a pripravené na ďalší rozvoj.</p>
+            <a class="link" href="/sluzby/navrh-infrastruktury.html">Viac informácií →</a>
+          </div>
+
+          <div class="service" role="listitem">
+            <h3>DDI: DNS / DHCP / IPAM</h3>
+            <p>Základné sieťové služby, od ktorých závisí stabilita komunikácie, prideľovanie IP adries aj prehľad v prostredí.</p>
+            <a class="link" href="/sluzby/ddi-dns-dhcp-ipam.html">Viac informácií →</a>
+          </div>
+
+          <div class="service" role="listitem">
+            <h3>NTP: časová infraštruktúra</h3>
+            <p>Správne nastavený čas je dôležitý pre logy, autentifikáciu, certifikáty aj celkovú spoľahlivosť systémov.</p>
+            <a class="link" href="/sluzby/ntp.html">Viac informácií →</a>
+          </div>
+
+          <div class="service" role="listitem">
+            <h3>On-premises, cloud a hybridné prostredia</h3>
+            <p>Pomáhame s návrhom, usporiadaním a stabilizáciou on-premises infraštruktúry aj cloudu v AWS, Azure a Google Cloud.</p>
+            <a class="link" href="/sluzby/cloud-aws-azure.html">Viac informácií →</a>
+          </div>
+
+          <div class="service" role="listitem">
+            <h3>Monitoring infraštruktúry</h3>
+            <p>Nastavenie dohľadu nad servermi, zariadeniami a službami tak, aby sa problémy zachytili skôr, než ovplyvnia prevádzku.</p>
+            <a class="link" href="/sluzby/monitoring-infrastruktury.html">Viac informácií →</a>
+          </div>
+
+          <div class="service" role="listitem">
+            <h3>Log manažment</h3>
+            <p>Zber, spracovanie a vyhodnocovanie logov, ktoré pomáhajú pri prevádzke, bezpečnosti aj riešení incidentov.</p>
+            <a class="link" href="/sluzby/log-manazment.html">Viac informácií →</a>
+          </div>
+
+          <div class="service" role="listitem">
+            <h3>Zálohy a obnova</h3>
+            <p>Pomáhame nastaviť zálohovanie a obnovu tak, aby nešlo len o formalitu, ale o reálne použiteľnú ochranu.</p>
+            <a class="link" href="/sluzby/zalohy-a-obnova.html">Viac informácií →</a>
+          </div>
+
+          <div class="service" role="listitem">
+            <h3>IT podpora</h3>
+            <p>Riešime incidenty a požiadavky používateľov, spravujeme systémy a pomáhame udržiavať IT prostredie stabilné.</p>
+            <a class="link" href="/sluzby/it-podpora.html">Viac informácií →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container two-col">
+        <div class="card pad">
+          <h2>Čo firmy najčastejšie potrebujú vyriešiť</h2>
+          <ul class="list">
+            <li>chýbajúci prehľad o tom, ako je prostredie nastavené,</li>
+            <li>opakované technické problémy a incidenty,</li>
+            <li>slabý monitoring, logy alebo zálohovanie,</li>
+            <li>nejasnosti pri migrácii do cloudu alebo modernizácii,</li>
+            <li>závislosť od jednotlivcov a nedostatočná dokumentácia.</li>
+          </ul>
+        </div>
+
+        <div class="card pad">
+          <h2>Ako pristupujeme k spolupráci</h2>
+          <ul class="list">
+            <li><b>Audit</b> – pomenujeme riziká, slabé miesta a rýchle možnosti zlepšenia</li>
+            <li><b>Návrh</b> – pripravíme odporúčania, architektúru a priority</li>
+            <li><b>Stabilizácia</b> – pomôžeme zaviesť opatrenia, ktoré znižujú riziko a chaos v prevádzke</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container two-col">
+        <div class="card pad">
+          <h2>Ceny a rozsah spolupráce</h2>
+          <p>
+            Ceny na webe nezverejňujeme, pretože rozsah spolupráce závisí od veľkosti prostredia,
+            dostupných prístupov, stavu dokumentácie a očakávaného výstupu.
+          </p>
+          <p>
+            V praxi však pracujeme s jasne definovaným rozsahom a dohodnutými výstupmi,
+            aby bolo od začiatku zrozumiteľné, čo je cieľom spolupráce.
+          </p>
+        </div>
+
+        <div class="card pad">
+          <h2>Kde začať, ak si nie ste istí</h2>
+          <p>
+            Ak chcete lepšie pochopiť konkrétne oblasti alebo si pripraviť otázky pred konzultáciou,
+            pozrite si naše články a odporúčania.
+          </p>
+          <a class="cta small" href="/clanky/">Prejsť na články</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="card pad">
+          <h2>Nie ste si istí, ktorá služba je pre vás najvhodnejšia?</h2>
+          <p>
+            Stačí nám stručne opísať, čo sa vo firme deje, aké problémy riešite alebo akú zmenu plánujete.
+            Pomôžeme vám zorientovať sa a navrhneme ďalší krok.
+          </p>
+          <a class="cta" href="/kontakt.html">Kontaktovať WOV Tech</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="brand">
+          <img class="brand-logo" src="/assets/img/logo-mark.png" alt="WOV Tech logo" width="36" height="36" />
+          <span>
+            WOV Tech
+            <span class="sub">Správne nastavené IT</span>
+          </span>
+        </div>
+        <small>© 2026 WOV Tech s. r. o.</small>
+        <div style="margin-top:8px; display:flex; gap:10px; flex-wrap:wrap">
+          <a href="/ochrana-osobnych-udajov.html">Ochrana osobných údajov</a>
+          <a href="/obchodne-podmienky.html">Obchodné podmienky</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Domov",
+        "item": "https://wovtech.sk/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Služby",
+        "item": "https://wovtech.sk/sluzby/"
+      }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "WOV Tech s. r. o.",
+    "url": "https://wovtech.sk",
+    "logo": "https://wovtech.sk/assets/img/logo-full.png",
+    "email": "kontakt@wovtech.sk",
+    "description": "Pomáhame malým a stredným firmám s návrhom a stabilizáciou IT infraštruktúry.",
+    "areaServed": {
+      "@type": "Country",
+      "name": "SK"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer support",
+      "email": "kontakt@wovtech.sk"
+    },
+    "knowsAbout": [
+      "On-premises, cloud a hybridné riešenia",
+      "Monitoring, logy, zálohy a obnova",
+      "Návrh a úprava IT infraštruktúry",
+      "IT podpora"
+    ]
+  }
+  </script>
+</body>
+</html>

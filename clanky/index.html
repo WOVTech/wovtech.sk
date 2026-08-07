@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="sk">
+<head>
+  <link rel="icon" href="/assets/img/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Články o IT infraštruktúre | WOV Tech</title>
+
+  <meta name="description" content="Praktické články o IT infraštruktúre: monitoring, logy, zálohy, NTP, identita, incidenty, zmeny, networking a dokumentácia." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://wovtech.sk/clanky/" />
+
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Články o IT infraštruktúre | WOV Tech" />
+  <meta property="og:description" content="Praktické články a odporúčania k návrhu a stabilizácii IT infraštruktúry." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://wovtech.sk/clanky/" />
+  <meta property="og:image" content="https://wovtech.sk/assets/img/logo-full.png" />
+  <meta property="og:image:width" content="800" />
+  <meta property="og:image:height" content="412" />
+
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Články o IT infraštruktúre | WOV Tech" />
+  <meta name="twitter:description" content="Praktické články a odporúčania pre IT infraštruktúru." />
+  <meta name="twitter:image" content="https://wovtech.sk/assets/img/logo-full.png" />
+
+  <meta name="theme-color" content="#0b1220" />
+  <link rel="preload" href="/assets/img/hero-laptop.webp" as="image" type="image/webp" fetchpriority="high" />
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+
+  <style>
+    .article-links a {
+      color: #9ec5ff !important;
+      font-weight: 700;
+      text-decoration: underline;
+      text-decoration-color: rgba(158, 197, 255, 0.45);
+      text-underline-offset: 3px;
+      transition: color .15s ease, text-decoration-color .15s ease;
+    }
+
+    .article-links a:hover {
+      color: #c7ddff !important;
+      text-decoration-color: rgba(199, 221, 255, 0.85);
+    }
+  </style>
+</head>
+<body>
+  <script src="/assets/js/dropdown.js" defer></script>
+  <a class="skip-link" href="#content">Preskočiť na obsah</a>
+
+  <header class="header">
+    <div class="container">
+      <nav class="nav" aria-label="Hlavná navigácia">
+        <a class="brand" href="/">
+          <img class="brand-logo" src="/assets/img/logo-mark.png" alt="WOV Tech logo" width="36" height="36" />
+          <span>WOV Tech <span class="sub">Správne nastavené IT</span></span>
+        </a>
+        <div class="menu">
+          <a href="/" aria-label="Domov">Domov</a>
+          <div class="dropdown" data-dropdown>
+            <a href="/sluzby/" class="drop-trigger" data-dropdown-trigger>Služby ▾</a>
+            <div class="submenu" role="menu" data-dropdown-menu>
+              <span class="submenu-title">Jednotlivé služby</span>
+              <a href="/sluzby/">Všetky služby</a>
+              <a href="/sluzby/navrh-infrastruktury.html">Návrh IT infraštruktúry</a>
+              <a href="/sluzby/cloud-aws-azure.html">Cloud AWS / Azure</a>
+              <a href="/sluzby/monitoring-infrastruktury.html">Monitoring infraštruktúry</a>
+              <a href="/sluzby/log-manazment.html">Log manažment</a>
+              <a href="/sluzby/zalohy-a-obnova.html">Zálohovanie a obnova</a>
+              <a href="/sluzby/it-podpora.html">IT podpora</a>
+              <a href="/sluzby/ddi-dns-dhcp-ipam.html">DDI / DNS / DHCP / IPAM</a>
+              <a href="/sluzby/ntp.html">NTP</a>
+            </div>
+          </div>
+          <div class="dropdown" data-dropdown>
+            <a href="/clanky/" class="drop-trigger" data-dropdown-trigger>Články ▾</a>
+            <div class="submenu" role="menu" data-dropdown-menu>
+              <span class="submenu-title">Články</span>
+              <a href="/clanky/">Všetky články</a>
+              <a href="/clanky/monitoring-vs-logy.html">Monitoring vs. logy</a>
+              <a href="/clanky/zalohy-a-obnova.html">Zálohovanie a obnova</a>
+              <a href="/clanky/ntp-preco-je-cas-kriticky.html">NTP: prečo je správny čas kritický</a>
+              <a href="/clanky/incident-a-change-procesy.html">Incidenty a zmeny</a>
+              <a href="/clanky/pristupy-a-identita.html">Prístupy a identita</a>
+              <a href="/clanky/networking-v-infra-navrhu.html">Sieť v návrhu infraštruktúry</a>
+              <a href="/clanky/dokumentacia-a-runbooky.html">Dokumentácia a runbooky</a>
+            </div>
+          </div>
+          <div class="dropdown" data-dropdown>
+            <a href="/prirucky/" class="drop-trigger" data-dropdown-trigger>Príručky ▾</a>
+            <div class="submenu" role="menu" data-dropdown-menu>
+              <span class="submenu-title">Príručky a kontrolné zoznamy</span>
+              <a href="/prirucky/">Všetky príručky</a>
+              <a href="/prirucky/ddi-dns-dhcp-ipam.html">DDI / DNS / DHCP / IPAM — sieťové služby</a>
+              <a href="/prirucky/ntp.html">NTP — presný čas v sieti</a>
+              <a href="/prirucky/cloud-aws-azure.html">Cloud AWS / Azure / GCP — cloudová architektúra</a>
+              <a href="/prirucky/monitoring-infrastruktury.html">Monitoring — zdravie infraštruktúry</a>
+              <a href="/prirucky/log-manazment.html">Log manažment — zber a analýza logov</a>
+              <a href="/prirucky/zalohy-a-obnova.html">Zálohovanie a obnova — obnoviteľnosť</a>
+            </div>
+          </div>
+          <a href="/o-nas.html">O nás</a>
+          <a href="/kontakt.html">Kontakt</a>
+        </div>
+        <div class="language-area">
+          <a class="language-switch" href="https://wovtech.eu/" lang="en" hreflang="en" aria-label="Switch to English">
+            <span class="language-code">EN</span>
+            <span class="language-label">English</span>
+          </a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="content">
+    <section class="hero">
+      <div class="grain" aria-hidden="true"></div>
+
+      <div class="container">
+        <div class="card pad-lg">
+          <h1>Články a odporúčania k návrhu a stabilizácii IT infraštruktúry</h1>
+
+          <p>
+            Na tejto stránke nájdete <b>praktické články a checklisty</b>, ktoré firmám pomáhajú lepšie sa zorientovať
+            v témach, ako sú monitoring, logy, zálohovanie, prístupy, zmeny či základné princípy návrhu infraštruktúry.
+          </p>
+
+          <p>Obsah pripravujeme tak, aby bol užitočný:</p>
+
+          <ul class="list" aria-label="Pre koho sú články určené" style="margin-top:10px">
+            <li>pre manažment, ktorý chce lepšie rozumieť stavu IT,</li>
+            <li>pre firmy, ktoré sa pripravujú na zmenu alebo modernizáciu,</li>
+            <li>pre interné IT tímy, ktoré si chcú overiť dôležité oblasti prevádzky,</li>
+            <li>pre firmy, ktoré si chcú lepšie pripraviť otázky pred konzultáciou.</li>
+          </ul>
+
+          <div class="hr"></div>
+
+          <p style="margin-top:12px">
+            Zjednodušene: <b>články vám pomôžu pochopiť súvislosti, lepšie pomenovať problém a rozhodnúť sa, čo má zmysel riešiť.</b>
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>Základné témy k návrhu infraštruktúry</h2>
+        <p>Články, ktoré pomáhajú pochopiť dôležité oblasti návrhu a prevádzky IT prostredia.</p>
+
+        <div class="grid" role="list">
+          <div class="service" role="listitem">
+            <h3>Monitoring vs. logy</h3>
+            <p>Vysvetľuje, prečo sa tieto dve oblasti často zamieňajú a ako spolu súvisia v praxi.</p>
+            <a class="link" href="/clanky/monitoring-vs-logy.html">Viac informácií →</a>
+          </div>
+
+          <div class="service" role="listitem">
+            <h3>Zálohovanie a obnova</h3>
+            <p>Praktický pohľad na to, prečo zálohy musia byť súčasťou návrhu, nie až dodatočným doplnkom.</p>
+            <a class="link" href="/clanky/zalohy-a-obnova.html">Viac informácií →</a>
+          </div>
+
+          <div class="service" role="listitem">
+            <h3>NTP: prečo je správny čas kritický</h3>
+            <p>Ukazuje, prečo je presný čas základom pre logy, autentifikáciu a správne fungujúce systémy.</p>
+            <a class="link" href="/clanky/ntp-preco-je-cas-kriticky.html">Viac informácií →</a>
+          </div>
+
+          <div class="service" role="listitem">
+            <h3>Incidenty a zmeny (Change)</h3>
+            <p>Pomáha pochopiť, ako riadiť incidenty, zmeny a prevádzkové procesy bez chaosu.</p>
+            <a class="link" href="/clanky/incident-a-change-procesy.html">Viac informácií →</a>
+          </div>
+
+          <div class="service" role="listitem">
+            <h3>Prístupy a identita</h3>
+            <p>Vysvetľuje, prečo správne nastavená identita a prístupy sú kľúčové pre bezpečnosť aj prevádzku.</p>
+            <a class="link" href="/clanky/pristupy-a-identita.html">Viac informácií →</a>
+          </div>
+
+          <div class="service" role="listitem">
+            <h3>Sieť v návrhu infraštruktúry</h3>
+            <p>Približuje, ako sieť ovplyvňuje celkovú architektúru a prečo je dôležitá už na začiatku návrhu.</p>
+            <a class="link" href="/clanky/networking-v-infra-navrhu.html">Viac informácií →</a>
+          </div>
+
+          <div class="service" role="listitem">
+            <h3>Dokumentácia a runbooky</h3>
+            <p>Ukazuje, prečo dobre spracovaná dokumentácia znižuje riziko a zjednodušuje operácie.</p>
+            <a class="link" href="/clanky/dokumentacia-a-runbooky.html">Viac informácií →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="card pad">
+          <h2>Hľadáte odpoveď na konkrétny problém?</h2>
+          <p>
+            Ak si nie ste istí, ktorý článok je pre vás relevantný, alebo už riešite konkrétnu situáciu vo firme,
+            napíšte nám. Pomôžeme vám rýchlejšie sa zorientovať a navrhneme ďalší postup.
+          </p>
+          <a class="cta" href="/kontakt.html">Kontaktovať WOV Tech</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="brand">
+          <img class="brand-logo" src="/assets/img/logo-mark.png" alt="WOV Tech logo" width="36" height="36" />
+          <span>
+            WOV Tech
+            <span class="sub">Správne nastavené IT</span>
+          </span>
+        </div>
+        <small>© 2026 WOV Tech s. r. o.</small>
+        <div style="margin-top:8px; display:flex; gap:10px; flex-wrap:wrap">
+          <a href="/ochrana-osobnych-udajov.html">Ochrana osobných údajov</a>
+          <a href="/obchodne-podmienky.html">Obchodné podmienky</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Domov",
+        "item": "https://wovtech.sk/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Články",
+        "item": "https://wovtech.sk/clanky/"
+      }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Články | WOV Tech",
+    "url": "https://wovtech.sk/clanky/",
+    "description": "Praktické články a odporúčania k návrhu a stabilizácii IT infraštruktúry.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "WOV Tech s. r. o.",
+      "url": "https://wovtech.sk",
+      "logo": "https://wovtech.sk/assets/img/logo-full.png"
+    }
+  }
+  </script>
+</body>
+</html>

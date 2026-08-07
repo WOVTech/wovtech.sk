@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Homepage - highest priority -->
+  <url><loc>https://wovtech.sk/</loc><lastmod>2026-08-07</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  
+  <!-- Main navigation pages -->
+  <url><loc>https://wovtech.sk/sluzby/</loc><lastmod>2026-08-07</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://wovtech.sk/sluzby/navrh-infrastruktury.html</loc><lastmod>2026-08-07</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://wovtech.sk/o-nas.html</loc><lastmod>2026-08-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://wovtech.sk/kontakt.html</loc><lastmod>2026-08-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  
+  <!-- Service pages -->
+  <url><loc>https://wovtech.sk/sluzby/cloud-aws-azure.html</loc><lastmod>2026-08-07</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://wovtech.sk/sluzby/ddi-dns-dhcp-ipam.html</loc><lastmod>2026-08-07</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://wovtech.sk/sluzby/log-manazment.html</loc><lastmod>2026-08-07</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://wovtech.sk/sluzby/monitoring-infrastruktury.html</loc><lastmod>2026-08-07</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://wovtech.sk/sluzby/it-podpora.html</loc><lastmod>2026-08-07</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://wovtech.sk/sluzby/ntp.html</loc><lastmod>2026-08-07</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://wovtech.sk/sluzby/zalohy-a-obnova.html</loc><lastmod>2026-08-07</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  
+  <!-- Articles -->
+  <url><loc>https://wovtech.sk/clanky/</loc><lastmod>2026-08-07</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://wovtech.sk/clanky/dokumentacia-a-runbooky.html</loc><lastmod>2026-08-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://wovtech.sk/clanky/incident-a-change-procesy.html</loc><lastmod>2026-08-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://wovtech.sk/clanky/monitoring-vs-logy.html</loc><lastmod>2026-08-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://wovtech.sk/clanky/networking-v-infra-navrhu.html</loc><lastmod>2026-08-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://wovtech.sk/clanky/ntp-preco-je-cas-kriticky.html</loc><lastmod>2026-08-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://wovtech.sk/clanky/pristupy-a-identita.html</loc><lastmod>2026-08-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://wovtech.sk/clanky/zalohy-a-obnova.html</loc><lastmod>2026-08-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  
+  <!-- Príručky -->
+  <url><loc>https://wovtech.sk/prirucky/</loc><lastmod>2026-08-07</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://wovtech.sk/prirucky/cloud-aws-azure.html</loc><lastmod>2026-08-07</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://wovtech.sk/prirucky/ddi-dns-dhcp-ipam.html</loc><lastmod>2026-08-07</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://wovtech.sk/prirucky/log-manazment.html</loc><lastmod>2026-08-07</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://wovtech.sk/prirucky/monitoring-infrastruktury.html</loc><lastmod>2026-08-07</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://wovtech.sk/prirucky/ntp.html</loc><lastmod>2026-08-07</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://wovtech.sk/prirucky/zalohy-a-obnova.html</loc><lastmod>2026-08-07</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  
+  <!-- Legal pages -->
+  <url><loc>https://wovtech.sk/ochrana-osobnych-udajov.html</loc><lastmod>2026-08-07</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://wovtech.sk/obchodne-podmienky.html</loc><lastmod>2026-08-07</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
+</urlset>

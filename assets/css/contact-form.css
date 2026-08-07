@@ -1,0 +1,160 @@
+/* Contact Form Styles */
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-group label {
+  font-weight: 800;
+  color: var(--text);
+  font-size: 14px;
+  letter-spacing: 0.5px;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid var(--glassBorder);
+  background: rgba(11, 18, 32, 0.45);
+  color: var(--text);
+  font-family: inherit;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+/* Custom select styling */
+.form-group select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  padding-right: 28px;
+  background-image: url('data:image/svg+xml;charset=UTF-8,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="rgb(238, 244, 255)" stroke-width="2"%3E%3Cpolyline points="6 9 12 15 18 9"%3E%3C/polyline%3E%3C/svg%3E');
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  background-size: 18px;
+  padding-right: 28px;
+}
+
+/* Style select options */
+.form-group select option {
+  background-color: var(--bg);
+  color: var(--text);
+  padding: 8px 12px;
+}
+
+.form-group select option:checked {
+  background: var(--accent);
+  color: var(--text);
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: var(--accent);
+  background: rgba(79, 140, 255, 0.08);
+  box-shadow: 0 0 0 3px rgba(79, 140, 255, 0.1);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+  font-family: inherit;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: rgba(238, 244, 255, 0.5);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+@media (max-width: 700px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+.form-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 12px 0;
+}
+
+.form-checkbox input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+.form-checkbox label {
+  margin: 0;
+  font-weight: 650;
+  cursor: pointer;
+}
+
+.form-submit {
+  margin-top: 12px;
+  padding: 12px 16px;
+  background: rgba(79, 140, 255, 0.18);
+  border: 1px solid rgba(79, 140, 255, 0.45);
+  border-radius: 14px;
+  color: rgba(238, 244, 255, 0.96);
+  font-weight: 800;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.form-submit:hover {
+  background: rgba(79, 140, 255, 0.24);
+  border-color: rgba(79, 140, 255, 0.75);
+}
+
+.form-submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.form-message {
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  font-weight: 700;
+  text-align: center;
+  margin-top: 12px;
+}
+
+.form-message.success {
+  background: rgba(103, 245, 198, 0.15);
+  border-color: rgba(103, 245, 198, 0.4);
+  color: rgba(167, 255, 230, 0.95);
+}
+
+.form-message.error {
+  background: rgba(255, 100, 100, 0.15);
+  border-color: rgba(255, 100, 100, 0.4);
+  color: rgba(255, 150, 150, 0.95);
+}
+
+.required {
+  color: var(--accent2);
+  font-weight: 800;
+}

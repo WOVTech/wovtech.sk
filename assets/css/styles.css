@@ -335,9 +335,19 @@ small{color:var(--muted)}
   }
 
   .dropdown .submenu{
-    position: static;
-    margin-top: 6px;
+    position: fixed;
+    top: var(--submenu-top, 96px);
+    left: var(--submenu-left, 10px);
+    width: var(--submenu-width, min(320px, calc(100vw - 20px)));
+    min-width: 0;
+    max-height: var(--submenu-max-height, calc(100dvh - 116px));
+    margin: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
     display: none;
+    z-index: 100;
   }
 
 }

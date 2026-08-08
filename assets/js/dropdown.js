@@ -30,6 +30,43 @@ document.addEventListener('DOMContentLoaded', () => {
     );
   };
 
+  const positionSubmenu = (dropdown) => {
+    const trigger = dropdown.querySelector('[data-dropdown-trigger]');
+    const submenu = dropdown.querySelector('[data-dropdown-menu]');
+    if (!trigger || !submenu) return;
+
+    if (!window.matchMedia('(max-width: 900px)').matches) {
+      submenu.style.removeProperty('--submenu-top');
+      submenu.style.removeProperty('--submenu-left');
+      submenu.style.removeProperty('--submenu-width');
+      submenu.style.removeProperty('--submenu-max-height');
+      return;
+    }
+
+    const gap = 8;
+    const edge = 10;
+    const triggerRect = trigger.getBoundingClientRect();
+    const viewportHeight = window.visualViewport?.height || window.innerHeight;
+    const viewportWidth = window.visualViewport?.width || window.innerWidth;
+    const width = Math.min(320, viewportWidth - edge * 2);
+    const left = Math.min(
+      viewportWidth - width - edge,
+      Math.max(edge, triggerRect.left + triggerRect.width / 2 - width / 2)
+    );
+    const roomBelow = viewportHeight - triggerRect.bottom - gap - edge;
+    const roomAbove = triggerRect.top - gap - edge;
+    const openAbove = roomBelow < 180 && roomAbove > roomBelow;
+    const maxHeight = Math.max(120, Math.min(420, openAbove ? roomAbove : roomBelow));
+    const top = openAbove
+      ? Math.max(edge, triggerRect.top - gap - maxHeight)
+      : triggerRect.bottom + gap;
+
+    submenu.style.setProperty('--submenu-top', `${Math.round(top)}px`);
+    submenu.style.setProperty('--submenu-left', `${Math.round(left)}px`);
+    submenu.style.setProperty('--submenu-width', `${Math.round(width)}px`);
+    submenu.style.setProperty('--submenu-max-height', `${Math.round(maxHeight)}px`);
+  };
+
   const closeDropdown = (dropdown) => {
     dropdown.classList.remove('is-open');
     dropdown.querySelector('[data-dropdown-trigger]')?.setAttribute('aria-expanded', 'false');
@@ -57,6 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (shouldOpen) closeOtherDropdowns(dropdown);
       dropdown.classList.toggle('is-open', shouldOpen);
       trigger.setAttribute('aria-expanded', String(shouldOpen));
+      if (shouldOpen) positionSubmenu(dropdown);
       syncOpenDropdownState();
     };
 
@@ -85,4 +123,12 @@ document.addEventListener('DOMContentLoaded', () => {
       if (!dropdown.contains(event.target)) closeDropdown(dropdown);
     });
   });
+
+  const repositionOpenDropdown = () => {
+    document.querySelectorAll('[data-dropdown].is-open').forEach(positionSubmenu);
+  };
+
+  window.addEventListener('resize', repositionOpenDropdown);
+  window.visualViewport?.addEventListener('resize', repositionOpenDropdown);
+  window.addEventListener('scroll', repositionOpenDropdown, { passive: true });
 });

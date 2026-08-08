@@ -242,20 +242,18 @@ small{color:var(--muted)}
   place-items:center;
   width:30px;
   height:30px;
-  border:1px solid rgba(0,136,245,.28);
+  border:1px solid rgba(0,112,205,.45);
   border-radius:10px;
-  color:#0759a6;
-  background:
-    radial-gradient(circle at 26% 20%, #fff 0 18%, rgba(255,255,255,.7) 35%, transparent 58%),
-    linear-gradient(145deg, #f7fcff 0%, #dff4ff 42%, #b9e5ff 72%, #8dcefa 100%);
+  color:#064d91;
+  background:linear-gradient(145deg, #eaf3f8 0%, #c5e5f5 38%, #68bde9 72%, #168bd1 100%);
   font-size:11px;
   font-weight:900;
   letter-spacing:.04em;
-  text-shadow:0 1px 0 rgba(255,255,255,.9);
+  text-shadow:0 1px 0 rgba(255,255,255,.55);
   box-shadow:
-    0 2px 6px rgba(0,96,180,.14),
-    inset 0 1px 0 rgba(255,255,255,.95),
-    inset 0 -1px 0 rgba(0,105,205,.10);
+    0 2px 6px rgba(0,96,180,.18),
+    inset 0 1px 0 rgba(255,255,255,.7),
+    inset 0 -1px 0 rgba(0,73,145,.18);
 }
 
 .language-label{

@@ -499,13 +499,19 @@ main#content::before{
 }
 
 /* Moderné formáty bez JavaScript detekcie; PNG zostáva ako fallback. */
-@supports (background-image: url('data:image/webp;base64,UklGRiYAAABXRUJQVlA4IBIAAAAwAQCdASoBAAEADsD+JaQAA3AA/v3AgAA=')) {
+@supports (background-image: image-set(url("image.avif") type("image/avif"))) {
   .hero::before{
-    background-image:url("../img/hero-laptop.webp");
+    background-image:image-set(
+      url("../img/hero-laptop.avif") type("image/avif"),
+      url("../img/hero-laptop.webp") type("image/webp")
+    );
   }
 
   main#content::before{
-    background-image:url("../img/hero-datacenter.webp");
+    background-image:image-set(
+      url("../img/hero-datacenter.avif") type("image/avif"),
+      url("../img/hero-datacenter.webp") type("image/webp")
+    );
   }
 }
 

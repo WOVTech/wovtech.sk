@@ -240,15 +240,22 @@ small{color:var(--muted)}
 .language-code{
   display:grid;
   place-items:center;
-  width:28px;
-  height:28px;
-  border-radius:50%;
-  color:#fff;
-  background:linear-gradient(145deg, #00b7ff 0%, #0088f5 45%, #004fc4 100%);
+  width:30px;
+  height:30px;
+  border:1px solid rgba(0,136,245,.28);
+  border-radius:10px;
+  color:#0759a6;
+  background:
+    radial-gradient(circle at 26% 20%, #fff 0 18%, rgba(255,255,255,.7) 35%, transparent 58%),
+    linear-gradient(145deg, #f7fcff 0%, #dff4ff 42%, #b9e5ff 72%, #8dcefa 100%);
   font-size:11px;
   font-weight:900;
   letter-spacing:.04em;
-  box-shadow:0 4px 12px rgba(0,110,230,.38), inset 0 1px 0 rgba(255,255,255,.24);
+  text-shadow:0 1px 0 rgba(255,255,255,.9);
+  box-shadow:
+    0 2px 6px rgba(0,96,180,.14),
+    inset 0 1px 0 rgba(255,255,255,.95),
+    inset 0 -1px 0 rgba(0,105,205,.10);
 }
 
 .language-label{

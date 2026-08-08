@@ -77,7 +77,7 @@
     }
 
     if (!data.privacy) {
-      showMessage('Musíte súhlasiť s ochranou osobných údajov', 'error');
+      showMessage('Potvrďte oboznámenie sa s informáciami o spracúvaní osobných údajov', 'error');
       return;
     }
 
@@ -105,7 +105,7 @@
       });
 
       if (response.ok) {
-        showMessage('✓ Ďakujeme! Vaša správa bola úspešne odoslaná. Odpovieme vám čo najskôr.', 'success');
+        showMessage('✓ Ďakujeme! Vaša správa bola úspešne odoslaná.', 'success');
         form.reset();
         submitBtn.textContent = originalText;
         submitBtn.disabled = false;

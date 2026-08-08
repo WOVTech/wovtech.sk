@@ -88,7 +88,7 @@
 
     try {
       // Send via Formspree
-      const response = await fetch('https://formspree.io/f/xaqlqnab', {
+      const response = await fetch(form.action, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

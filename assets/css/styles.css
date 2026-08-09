@@ -432,7 +432,16 @@ small{color:var(--muted)}
 }
 
 @media (max-width: 900px){
-  .hero-grid{grid-template-columns:1fr}
+  .hero-grid{grid-template-columns:minmax(0, 1fr)}
+
+  .hero-grid > *{
+    min-width:0;
+  }
+
+  .hero-grid h1,
+  .hero-grid h2{
+    overflow-wrap:break-word;
+  }
 }
 
 /* =========================

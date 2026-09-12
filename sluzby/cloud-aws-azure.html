@@ -7,8 +7,8 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Cloud ops (AWS/Azure/GCP) | WOV Tech</title>
-  <meta name="description" content="Cloud ops pre AWS/Azure/GCP: štandardy, bezpečnosť, prístupy, IaC a stabilizácia prevádzky. Menej ručných zásahov, viac kontroly a opakovateľnosti." />
+  <title>Cloud ops (AWS/Azure/Google) | WOV Tech</title>
+  <meta name="description" content="Cloud ops pre AWS/Azure/Google: štandardy, bezpečnosť, prístupy, IaC a stabilizácia prevádzky. Menej ručných zásahov, viac kontroly a opakovateľnosti." />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://wovtech.sk/sluzby/cloud-aws-azure.html" />
   <link rel="alternate" hreflang="sk" href="https://wovtech.sk/sluzby/cloud-aws-azure.html" />
@@ -16,8 +16,8 @@
   <link rel="alternate" hreflang="x-default" href="https://wovtech.eu/services/cloud-aws-azure.html" />
 
   <!-- Open Graph Meta Tags -->
-  <meta property="og:title" content="Cloud ops (AWS/Azure/GCP) | WOV Tech" />
-  <meta property="og:description" content="Cloud ops pre AWS/Azure/GCP: štandardy, bezpečnosť, prístupy, IaC a stabilizácia prevádzky. Menej ručných zásahov, viac kontroly a opakovateľnosti." />
+  <meta property="og:title" content="Cloud ops (AWS/Azure/Google) | WOV Tech" />
+  <meta property="og:description" content="Cloud ops pre AWS/Azure/Google: štandardy, bezpečnosť, prístupy, IaC a stabilizácia prevádzky. Menej ručných zásahov, viac kontroly a opakovateľnosti." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://wovtech.sk/sluzby/cloud-aws-azure.html" />
   <meta property="og:image" content="https://wovtech.sk/assets/img/logo-full.png" />
@@ -26,8 +26,8 @@
 
   <!-- Twitter Card Meta Tags -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Cloud ops (AWS/Azure/GCP) | WOV Tech" />
-  <meta name="twitter:description" content="Cloud ops pre AWS/Azure/GCP: štandardy, bezpečnosť, prístupy, IaC a stabilizácia prevádzky. Menej ručných zásahov, viac kontroly a opakovateľnosti." />
+  <meta name="twitter:title" content="Cloud ops (AWS/Azure/Google) | WOV Tech" />
+  <meta name="twitter:description" content="Cloud ops pre AWS/Azure/Google: štandardy, bezpečnosť, prístupy, IaC a stabilizácia prevádzky. Menej ručných zásahov, viac kontroly a opakovateľnosti." />
   <meta name="twitter:image" content="https://wovtech.sk/assets/img/logo-full.png" />
   <meta name="theme-color" content="#0b1220" />
   <link rel="preload" href="/assets/img/hero-laptop.avif" as="image" type="image/avif" fetchpriority="high" />
@@ -82,7 +82,7 @@
               <a href="/prirucky/">Všetky príručky</a>
               <a href="/prirucky/ddi-dns-dhcp-ipam.html">DDI / DNS / DHCP / IPAM — sieťové služby</a>
               <a href="/prirucky/ntp.html">NTP — presný čas v sieti</a>
-              <a href="/prirucky/cloud-aws-azure.html">Cloud AWS / Azure / GCP — cloudová architektúra</a>
+              <a href="/prirucky/cloud-aws-azure.html">Cloud AWS / Azure / Google — cloudová architektúra</a>
               <a href="/prirucky/monitoring-infrastruktury.html">Monitoring — zdravie infraštruktúry</a>
               <a href="/prirucky/log-manazment.html">Log manažment — zber a analýza logov</a>
               <a href="/prirucky/zalohy-a-obnova.html">Zálohovanie a obnova — obnoviteľnosť</a>
@@ -126,11 +126,11 @@
         <div class="card pad">
           <h2>Čo typicky riešime</h2>
           <ul class="list">
-            <li>základné štandardy: účty/subscriptions, naming, tagging, politika prístupov</li>
+            <li>základné štandardy: účty/predplatné, štrukturované názvy, tagovanie, politika prístupov</li>
             <li>bezpečnosť a ochrana perimetra: WAF, load balancing, segmentácia, hardening</li>
-            <li>zálohovanie a obnova, správa storage, šifrovanie a kľúče</li>
-            <li>IaC a režim zmien (napr. Terraform): opakovateľnosť, kontrola a minimalizácia driftu</li>
-            <li>troubleshooting a stabilizácia: výkon, dostupnosť, incidenty a prevádzkové riziká</li>
+            <li>zálohovanie a obnova, správa úložiska, šifrovanie a kľúče</li>
+            <li>infraštruktúra ako kód: opakovateľnosť, kontrola a minimalizácia odchýlky</li>
+            <li>odstranovanie chýb a stabilizácia: výkon, dostupnosť, incidenty a prevádzkové riziká</li>
           </ul>
         </div>
 
@@ -149,11 +149,11 @@
         <div class="card pad">
           <h2>Čo to zahŕňa</h2>
           <ul class="list">
-            <li><b>Governance:</b> práva, role, politiky, tagging a kontrola billingu</li>
-            <li><b>Security:</b> bezpečnosť siete, Identity &amp; Access manažment, šifrovanie, compliance</li>
-            <li><b>Infrastructure as Code:</b> Terraform, CloudFormation, repeatable deployments</li>
-            <li><b>Monitoring &amp; observability:</b> CloudWatch, metriky, logy, alerting</li>
-            <li><b>Optimalizácia:</b> náklady, výkon, utilizácia, autoscaling</li>
+            <li><b>Správa:</b> práva, role, politiky, tagovanie a kontrola fakturácie</li>
+            <li><b>Bezpečnosť:</b> bezpečnosť siete, správa identít a prístupov, šifrovanie, súlad s normami a regulačnými požiadavkami</li>            
+            <li><b>Infraštruktúra ako kód:</b> Terraform, CloudFormation, opakovateľné nasadenia</li>
+            <li><b>Monitorovanie a pozorovateľnosť:</b> CloudWatch, metriky, logy, hlásenie incidentov</li>
+            <li><b>Optimalizácia:</b> náklady, výkon, využitie zdrojov, automatické škálovanie</li>
           </ul>
         </div>
 
@@ -171,10 +171,10 @@
           <h2>Často kladené otázky</h2>
           <p><b>Ako dlho trvá migrácia do cloudu?</b></p>
           <p>Závisí od veľkosti a zložitosti. Malá aplikácia: týždne. Väčší systém s dátami: mesiace. Plán zmien a testovanie sú kľúčové.</p>
-          <p><b>Je cloud lacnejší ako on-prem?</b></p>
-          <p>Často áno na začiatku, ale bez dobrého monitoringu a governance môžu náklady rásť. Kľúčom je optimalizácia a disciplína v prevádzke.</p>
+          <p><b>Je cloud lacnejší ako lokálne IT prostredie?</b></p>
+          <p>Zo začiatku áno, ale s monitoringom a správou môžu náklady rásť. Kľúčom je optimalizácia a disciplína v prevádzke.</p>
           <p><b>Ako zaistiť bezpečnosť?</b></p>
-          <p>Least privilege access, šifrovanie, monitoring a pravidelné compliance kontroly. Audit by mal byť bežnou súčasťou prevádzky.</p>
+          <p>Princíp minimálneho prístupu, šifrovanie, monitorovanie a pravidelné kontroly dodržiavania predpisov. Audit by mal byť bežnou súčasťou prevádzky.</p>
         </div>
 
         <div class="card pad">
@@ -231,7 +231,7 @@
   </footer>
 
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"Organization","name":"WOV Tech s. r. o.","url":"https://wovtech.sk","email":"kontakt@wovtech.sk","areaServed": "Worldwide","description":"Návrh a stabilizácia IT infraštruktúry: DDI (DNS/DHCP/IPAM), NTP, cloud (AWS/Azure/GCP), monitoring infra, log manažment a zálohovanie."}
+  {"@context":"https://schema.org","@type":"Organization","name":"WOV Tech s. r. o.","url":"https://wovtech.sk","email":"kontakt@wovtech.sk","areaServed": "Worldwide","description":"Návrh a stabilizácia IT infraštruktúry: DDI (DNS/DHCP/IPAM), NTP, cloud (AWS/Azure/Google), monitoring infra, log manažment a zálohovanie."}
   </script>
   <script type="application/ld+json">
   {

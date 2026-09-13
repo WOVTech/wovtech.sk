@@ -7,8 +7,8 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Log manažment | WOV Tech</title>
-  <meta name="description" content="Log manažment pre infra aj aplikácie: zber, normalizácia, retencia a vyhľadávanie logov pre rýchly triage a audit." />
+  <title>Manažment záznamov | WOV Tech</title>
+  <meta name="description" content="Manažment záznamov pre infraštruktúru aj aplikácie: zber, normalizácia, retencia a vyhľadávanie záznamov pre rýchly audit." />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://wovtech.sk/sluzby/log-manazment.html" />
   <link rel="alternate" hreflang="sk" href="https://wovtech.sk/sluzby/log-manazment.html" />
@@ -16,8 +16,8 @@
   <link rel="alternate" hreflang="x-default" href="https://wovtech.eu/services/log-management.html" />
 
   <!-- Open Graph Meta Tags -->
-  <meta property="og:title" content="Log manažment | WOV Tech" />
-  <meta property="og:description" content="Log manažment pre infra aj aplikácie: zber, normalizácia, retencia a vyhľadávanie logov pre rýchly triage a audit." />
+  <meta property="og:title" content="Manažment záznamov | WOV Tech" />
+  <meta property="og:description" content="Manažment záznamov pre infraštruktúru aj aplikácie: zber, normalizácia, retencia a vyhľadávanie záznamov pre rýchly audit." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://wovtech.sk/sluzby/log-manazment.html" />
   <meta property="og:image" content="https://wovtech.sk/assets/img/logo-full.png" />
@@ -26,8 +26,8 @@
 
   <!-- Twitter Card Meta Tags -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Log manažment | WOV Tech" />
-  <meta name="twitter:description" content="Log manažment pre infra aj aplikácie: zber, normalizácia, retencia a vyhľadávanie logov pre rýchly triage a audit." />
+  <meta name="twitter:title" content="Manažment záznamov | WOV Tech" />
+  <meta name="twitter:description" content="Manažment záznamov pre infraštruktúru aj aplikácie: zber, normalizácia, retencia a vyhľadávanie záznamov pre rýchly audit." />
   <meta name="twitter:image" content="https://wovtech.sk/assets/img/logo-full.png" />
   <meta name="theme-color" content="#0b1220" />
   <link rel="preload" href="/assets/img/hero-laptop.avif" as="image" type="image/avif" fetchpriority="high" />
@@ -54,7 +54,7 @@
               <a href="/sluzby/navrh-infrastruktury.html">Návrh IT infraštruktúry</a>
               <a href="/sluzby/cloud-aws-azure.html">Cloud AWS / Azure</a>
               <a href="/sluzby/monitoring-infrastruktury.html">Monitoring infraštruktúry</a>
-              <a href="/sluzby/log-manazment.html">Log manažment</a>
+              <a href="/sluzby/log-manazment.html">Manažment záznamov</a>
               <a href="/sluzby/zalohy-a-obnova.html">Zálohovanie a obnova</a>
               <a href="/sluzby/it-podpora.html">IT podpora</a>
               <a href="/sluzby/ddi-dns-dhcp-ipam.html">DDI / DNS / DHCP / IPAM</a>
@@ -66,7 +66,7 @@
             <div class="submenu" role="menu" data-dropdown-menu>
               <span class="submenu-title">Články</span>
               <a href="/clanky/">Všetky články</a>
-              <a href="/clanky/monitoring-vs-logy.html">Monitoring vs. logy</a>
+              <a href="/clanky/monitoring-vs-logy.html">Monitorovanie vs. záznamy</a>
               <a href="/clanky/zalohy-a-obnova.html">Zálohovanie a obnova</a>
               <a href="/clanky/ntp-preco-je-cas-kriticky.html">NTP: prečo je správny čas kritický</a>
               <a href="/clanky/incident-a-change-procesy.html">Incidenty a zmeny</a>
@@ -84,7 +84,7 @@
               <a href="/prirucky/ntp.html">NTP — presný čas v sieti</a>
               <a href="/prirucky/cloud-aws-azure.html">Cloud AWS / Azure / GCP — cloudová architektúra</a>
               <a href="/prirucky/monitoring-infrastruktury.html">Monitoring — zdravie infraštruktúry</a>
-              <a href="/prirucky/log-manazment.html">Log manažment — zber a analýza logov</a>
+              <a href="/prirucky/log-manazment.html">Manažment záznamov — zber a analýza</a>
               <a href="/prirucky/zalohy-a-obnova.html">Zálohovanie a obnova — obnoviteľnosť</a>
             </div>
           </div>
@@ -109,12 +109,12 @@
                     <nav class="breadcrumbs" aria-label="Drobečková navigácia">
             <a href="/">Domov</a><span aria-hidden="true">›</span>
             <a href="/sluzby/">Služby</a><span aria-hidden="true">›</span>
-            <span aria-current="page">Log manažment (ELK/OpenSearch)</span>
+            <span aria-current="page">Manažment záznamov (ELK/OpenSearch)</span>
           </nav>
 
-          <h1>Log manažment (ELK/OpenSearch)</h1>
+          <h1>Manažment záznamov (ELK/OpenSearch)</h1>
           <p>
-            Nastavujeme zber, spracovanie a vyhľadávanie logov pre infra aj aplikácie tak,
+            Nastavujeme zber, spracovanie a vyhľadávanie záznamov pre infra aj aplikácie tak,
             aby boli udalosti dohľadateľné a incidenty sa dali riešiť rýchlo a konzistentne.
           </p>
         </div>
@@ -126,82 +126,81 @@
         <div class="card pad">
           <h2>Čo typicky riešime</h2>
           <ul class="list">
-            <li>zber a doručovanie logov (agenti, pipeline, spoľahlivosť doručenia)</li>
-            <li>parsing, normalizáciu a jednotné polia pre vyhľadávanie</li>
-            <li>retenciu a index stratégiu s ohľadom na náklady</li>
-            <li>základné detekcie z logov (alerty) a „saved searches“ pre triage</li>
-          </ul>
+            <li>zber a doručovanie záznamov</li>
+            <li>spracovanie a normalizácia pre vyhľadávanie</li>
+            <li>retenciu a index stratégiu</li>
+            <li>základné detekcie z záznamov</li>
         </div>
 
         <div class="card pad">
           <h2>Prečo je to dôležité</h2>
           <p>
-            Logy obsahujú podrobný záznam o tom, čo sa stalo v systéme. Bez nich je ťažké riešiť incidenty,
+            Záznamy obsahujú podrobný záznam o tom, čo sa stalo v systéme. Bez nich je ťažké riešiť incidenty,
             audit bezpečnosti aj pochopiť, prečo aplikácia zlyháva.
           </p>
           <p>
             <b>Príklady:</b> zisťovanie bezpečnostného incidentu (kto sa prihlasoval a kedy?),
-            debugging aplikačnej chyby (čo sa stalo pred pádom?) alebo compliance audit (máme dôkaz?).
+            odstranovanie aplikačnej chyby (čo sa stalo pred pádom?) alebo audit dodržiavania predpisov (máme dôkaz?).
           </p>
         </div>
 
         <div class="card pad">
           <h2>Čo to zahŕňa</h2>
           <ul class="list">
-            <li><b>Ingestion:</b> zbieranie logov zo serverov, aplikácií a siete</li>
+            <li><b>Zber dát:</b> zbieranie záznamov zo serverov, aplikácií a siete</li>
             <li><b>Indexovanie:</b> spracovanie a uloženie v prehľadnom formáte</li>
-            <li><b>Vyhľadávanie:</b> rýchle nájdenie relevantných logov (Elasticsearch, OpenSearch)</li>
-            <li><b>Vizualizácia:</b> dashboardy a alerting na log patterns</li>
-            <li><b>Retencia:</b> ako dlho logy držíme a kto k nim má prístup</li>
+            <li><b>Vyhľadávanie:</b> rýchle nájdenie relevantných záznamov (Elasticsearch, OpenSearch)</li>
+            <li><b>Vizualizácia:</b> informačné náhľady na záznamy</li>
+            <li><b>Retencia:</b> ako dlho záznamy držíme a kto k nim má prístup</li>
           </ul>
         </div>
 
         <div class="card pad">
-          <h2>Typické problémy bez log manažmentu</h2>
+          <h2>Typické problémy bez centralizovaného manažmentu záznamov</h2>
           <ul class="list">
-            <li><b>Stratené logy:</b> bez centralizácie sa dôležité údaje hľadajú pomaly a neisto</li>
-            <li><b>Bez kontextu:</b> logy existujú, ale sú nečitateľné alebo bez correlation IDs</li>
-            <li><b>Bez možnosti auditu:</b> kto a kedy zmenil konfiguráciu? Bez centralizovaných logov sa to ťažko dokazuje</li>
-            <li><b>Compliance:</b> audit sa pýta, kde sú logy — a bez nich je to problém</li>
+            <li><b>Stratené záznamy:</b> bez centralizácie sa dôležité údaje hľadajú pomaly a neisto</li>
+            <li><b>Bez kontextu:</b> záznamy existujú, ale sú nečitateľné alebo bez súvisiaceho kontextu</li>
+            <li><b>Bez možnosti auditu:</b> kto a kedy zmenil konfiguráciu? Bez centralizovaných záznamov sa to ťažko dokazuje</li>
+            <li><b>Dodržiavanie predpisov:</b> audit sa pýta, kde sú záznamy — a bez nich je to problém</li>
           </ul>
         </div>
 
         <div class="card pad">
           <h2>Časté otázky</h2>
-          <p><b>Ako dlho by sme mali držať logy?</b></p>
-          <p>Závisí od compliance a účelu. Bežne 30 až 90 dní online pre rýchle vyhľadávanie a 1 až 2 roky v archive.</p>
+          <p><b>Ako dlho by sme mali záznamy zálohovať?</b></p>
+          <p>Závisí od nastavenia predpisov a účelu. Bežne 30 až 90 dní online pre rýchle vyhľadávanie a 1 až 2 roky v archive.</p>
           <p><b>ELK vs OpenSearch vs Splunk?</b></p>
           <p>ELK a OpenSearch sú flexibilné a často cenovo výhodnejšie. Splunk býva drahší, ale silný vo väčších enterprise scenároch. Voľba závisí od rozpočtu a zložitosti.</p>
-          <p><b>Ako parsovať logy bez formátu?</b></p>
-          <p>Prvým krokom je zaviesť jasný log formát — ideálne JSON. Až potom dáva zmysel parsing a ďalšia štrukturalizácia.</p>
+          <p><b>Ako spracovať záznamy bez formátu?</b></p>
+          <p>Prvým krokom je zaviesť jasný formát záznamov — ideálne JSON. Až potom dáva zmysel parsing a ďalšia štrukturalizácia.</p>
         </div>
 
         <div class="card pad">
           <h2>Ako pracujeme</h2>
           <p>
-            <b>Posúdenie:</b> zistíme, ako funguje váš log manažment — alebo či vôbec existuje.
+            <b>Posúdenie:</b> zistíme, ako funguje váš manažment záznamov.
           </p>
           <p>
-            <b>Návrh:</b> architektúra, retencia, alerting a compliance požiadavky.
+            <b>Návrh:</b> architektúra, retencia, hlásenie incidentov a požiadavky na dodžovanie predpisov.
           </p>
           <p>
-            <b>Setup &amp; integration:</b> ELK/OpenSearch deployment, ingest logov, dashboardy a alerting.
+            <b>Nastavenie a integrácia:</b> zavedenie ELK/OpenSearch, zber záznamov, dashboardy a hlásenia incidentov.
           </p>
         </div>
 
         <div class="card pad">
           <h2>Kontakt</h2>
           <p>
-            Ak chcete nastaviť centralizovaný log manažment alebo vylepšiť existujúci,
-            <a href="/kontakt.html"><b>ozvite sa nám</b></a>.
+            Ak chcete nastaviť centralizovaný manažment záznamov alebo vylepšiť existujúci, ozvite sa nám.
+            <a class="cta" href="/kontakt.html">Kontaktovať WOV Tech</a>
           </p>
         </div>
 
         <div class="card pad related-links">
           <h2>Súvisiace články</h2>
           <ul class="list">
-            <li><a href="/prirucky/log-manazment.html">Log manažment: čo si premyslieť</a></li>
-            <li><a href="/clanky/monitoring-vs-logy.html">Monitoring vs logy</a></li>
+            <li><a href="/prirucky/log-manazment.html">Manažment záznamov: čo si premyslieť</a></li>
+            <li><a href="/clanky/monitoring-vs-logy.html">Monitorovanie vs záznamy</a></li>
           </ul>
         </div>
       </div>
@@ -229,7 +228,7 @@
   </footer>
 
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"Organization","name":"WOV Tech s. r. o.","url":"https://wovtech.sk","email":"kontakt@wovtech.sk","areaServed": "Worldwide","description":"Návrh a stabilizácia IT infraštruktúry: DDI (DNS/DHCP/IPAM), NTP, cloud (AWS/Azure/GCP), monitoring infra, log manažment a zálohovanie."}
+  {"@context":"https://schema.org","@type":"Organization","name":"WOV Tech s. r. o.","url":"https://wovtech.sk","email":"kontakt@wovtech.sk","areaServed": "Worldwide","description":"Návrh a stabilizácia IT infraštruktúry: DDI (DNS/DHCP/IPAM), NTP, cloud (AWS/Azure/GCP), monitoring infra, manažment záznamov a zálohovanie."}
   </script>
   <script type="application/ld+json">
   {
@@ -254,7 +253,7 @@
           {
             "@type": "ListItem",
             "position": 3,
-            "name": "Log manažment (ELK/OpenSearch)",
+            "name": "Manažment záznamov (ELK/OpenSearch)",
             "item": "https://wovtech.sk/sluzby/log-manazment.html"
           }
         ]
